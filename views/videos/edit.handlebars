@@ -1,0 +1,29 @@
+<div class="contents-container">
+
+    Edit a Video
+
+    <form id="video-creation" method="post" action="/videos/{{_id}}/updates">
+        <label for="title-input">Title</label>
+        <input name="title" id="title-input" type="text" value="{{title}}" />
+        {{#if error.title}}
+            <span id="title-error">{{error.title.message}}</span>
+        {{/if}}
+
+        <label for="description-input">Description</label>
+        <textarea name="description" id="description-input">{{description}}</textarea>
+
+        <label for="url-input">Video UrL</label>
+        <input name="url" id="url-input" type="text" value="{{url}}"/>
+        {{#if error.url}}
+            <span id="url-error">{{error.url.message}}</span>
+        {{/if}}
+
+        <button type="submit">Save Video</button>
+    </form>
+
+    <div id="video-container">
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+    </div>
+
+</div>

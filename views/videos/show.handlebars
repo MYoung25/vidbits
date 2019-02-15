@@ -1,0 +1,19 @@
+<div class="contents-container">
+    <div class="video-card">
+
+        <div class="video-title">
+            <h1>{{title}}</h1>
+        </div>
+
+        <iframe class="video-player" src="{{url}}"></iframe>
+
+        <div class="video-description">
+            <p>{{description}}</p>
+        </div>
+
+        <a id="edit" href="/videos/{{_id}}/edit">Edit</a>
+        <form action="/videos/{{_id}}/deletions" method="post">
+            <input id="delete" value="Delete" type="submit" />
+        </form>
+    </div>
+</div>
